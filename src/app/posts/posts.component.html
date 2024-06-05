@@ -1,0 +1,11 @@
+<section class="posts-section">
+    <mat-card class="post-card" *ngFor="let post of posts">
+      <mat-card-header class="post-card-header">
+        <mat-card-title class="post-card-title">{{post.title}}</mat-card-title>
+        <mat-card-subtitle class="post-card-subtitle">{{post.body}}</mat-card-subtitle>
+      </mat-card-header>
+    </mat-card>
+    <div *ngIf="isLoading" class="loading-spinner">
+        <mat-spinner></mat-spinner>
+    </div>
+</section>

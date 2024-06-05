@@ -1,0 +1,16 @@
+<section>
+  <mat-card *ngFor="let comment of comments">
+    <mat-card-header>
+      <mat-card-title>{{comment.name}}</mat-card-title>
+      <mat-card-subtitle>{{comment.email}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>Post ID: {{comment.postId}}</p>
+      <p>ID: {{comment.id}}</p>
+      <p>Body: {{comment.body}}</p>
+    </mat-card-content>    
+  </mat-card>
+  <div *ngIf="isLoading">
+      <mat-spinner></mat-spinner>
+  </div>
+</section>
